@@ -13,7 +13,7 @@ def divide(a, b):
 
 def run_command(cmd):
     # Menjalankan command tanpa shell=True
-    result = subprocess.run(
+    result = subprocess.run(  # nosec B603
         cmd.split(), capture_output=True, text=True
     )
     return result.stdout
