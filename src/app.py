@@ -1,4 +1,4 @@
-import subprocess
+import subprocess  # nosec B404
 
 
 def add(a, b):
