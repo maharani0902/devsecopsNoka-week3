@@ -12,9 +12,8 @@ def divide(a, b):
 
 
 def run_command(cmd):
-    # penggunaan shell=True berbahaya
-    # (Command Injection)
+    # Menjalankan command tanpa shell=True
     result = subprocess.run(
-        cmd, shell=True, capture_output=True, text=True
+        cmd.split(), capture_output=True, text=True
     )
     return result.stdout
